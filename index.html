@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>精美响应式网页示例</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            input[type="text"] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .image-gallery img {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            td, th {
+                padding: 8px;
+            }
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        ol {
+            background-color: #f9f9f9;
+            padding: 20px 20px 20px 40px;
+            border-radius: 5px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .image-gallery img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            padding: 15px;
+            text-align: center;
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 12px;
+            text-align: center;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+        
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        form:focus-within {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>一级标题</h1>
+        <div>
+            <p>
+                段落标记，a是行内元素，效果是这样的，<a href="https://yangzh.cn">这是一个超链接地址。</a>
+            </p>
+            <ol>
+                <li>这是列表</li>
+                <li>这是列表</li>
+                <li>这是列表</li>
+                <li>这是列表</li>
+            </ol>
+            <div class="image-gallery">
+                <img src="https://via.placeholder.com/200x150.png?text=本地图片替代" alt="图片替代说明文字" width="200" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x150.png?text=图片加载失败'; this.alt='图片加载失败'" />
+                <img src="https://th.bing.com/th?id=ORMS.3fb2a132a334ae0b49ef98c73cc2c6cd&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0" alt="说明文字" width="200" />
+            </div>
+            <table>
+                <tr>
+                    <th>表头1</th>
+                    <th>表头2</th>
+                    <th>表头3</th>
+                </tr>
+                <tr>
+                    <td>单元格4</td>
+                    <td>单元格5</td>
+                    <td>单元格6</td>
+                </tr>
+                <tr>
+                    <td>单元格7</td>
+                    <td>单元格8</td>
+                    <td>单元格9</td>
+                </tr>
+            </table>
+            <form action="https://search.douban.com/book/subject_search" method="get">
+                <input type="text" name="search_text" placeholder="输入要搜索的书籍..." />
+                <input type="submit" value="搜索" />
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 添加交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 表格行高亮效果
+            const tableRows = document.querySelectorAll('table tr');
+            tableRows.forEach(row => {
+                row.addEventListener('click', function() {
+                    this.style.backgroundColor = '#d5e8f7';
+                    setTimeout(() => {
+                        this.style.backgroundColor = '';
+                    }, 500);
+                });
+            });
+
+            // 表单提交前验证
+            const searchForm = document.querySelector('form');
+            searchForm.addEventListener('submit', function(event) {
+                const searchInput = this.querySelector('input[name="search_text"]');
+                if (searchInput.value.trim() === '') {
+                    event.preventDefault();
+                    alert('请输入搜索内容');
+                    searchInput.focus();
+                }
+            });
+            
+            // 图片点击放大效果
+            const galleryImages = document.querySelectorAll('.image-gallery img');
+            galleryImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    // 创建遮罩层
+                    const overlay = document.createElement('div');
+                    overlay.style.position = 'fixed';
+                    overlay.style.top = '0';
+                    overlay.style.left = '0';
+                    overlay.style.width = '100%';
+                    overlay.style.height = '100%';
+                    overlay.style.backgroundColor = 'rgba(0,0,0,0.8)';
+                    overlay.style.display = 'flex';
+                    overlay.style.justifyContent = 'center';
+                    overlay.style.alignItems = 'center';
+                    overlay.style.zIndex = '1000';
+                    overlay.style.cursor = 'pointer';
+                    
+                    // 创建大图
+                    const largeImg = document.createElement('img');
+                    largeImg.src = this.src;
+                    largeImg.style.maxWidth = '90%';
+                    largeImg.style.maxHeight = '90%';
+                    largeImg.style.border = '3px solid white';
+                    largeImg.style.borderRadius = '5px';
+                    largeImg.style.boxShadow = '0 5px 25px rgba(0,0,0,0.5)';
+                    
+                    // 添加到页面
+                    overlay.appendChild(largeImg);
+                    document.body.appendChild(overlay);
+                    
+                    // 点击关闭
+                    overlay.addEventListener('click', function() {
+                        document.body.removeChild(overlay);
+                    });
+                });
+            });
+            
+            // 添加暗黑模式切换
+            const container = document.querySelector('.container');
+            const darkModeToggle = document.createElement('button');
+            darkModeToggle.textContent = '切换暗黑模式';
+            darkModeToggle.style.position = 'fixed';
+            darkModeToggle.style.bottom = '20px';
+            darkModeToggle.style.right = '20px';
+            darkModeToggle.style.padding = '10px 15px';
+            darkModeToggle.style.backgroundColor = '#3498db';
+            darkModeToggle.style.color = 'white';
+            darkModeToggle.style.border = 'none';
+            darkModeToggle.style.borderRadius = '4px';
+            darkModeToggle.style.cursor = 'pointer';
+            darkModeToggle.style.zIndex = '100';
+            darkModeToggle.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+            darkModeToggle.style.transition = 'all 0.3s ease';
+            
+            // 添加悬停效果
+            darkModeToggle.addEventListener('mouseover', function() {
+                this.style.backgroundColor = '#2980b9';
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            darkModeToggle.addEventListener('mouseout', function() {
+                this.style.backgroundColor = '#3498db';
+                this.style.transform = 'scale(1)';
+            });
+            
+            document.body.appendChild(darkModeToggle);
+            
+            let darkMode = false;
+            darkModeToggle.addEventListener('click', function() {
+                darkMode = !darkMode;
+                if (darkMode) {
+                    document.body.style.backgroundColor = '#222';
+                    document.body.style.color = '#eee';
+                    container.style.backgroundColor = '#333';
+                    container.style.color = '#eee';
+                    container.style.boxShadow = '0 2px 10px rgba(255, 255, 255, 0.1)';
+                    darkModeToggle.textContent = '切换亮色模式';
+                } else {
+                    document.body.style.backgroundColor = '#f5f5f5';
+                    document.body.style.color = '#333';
+                    container.style.backgroundColor = 'white';
+                    container.style.color = '#333';
+                    container.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                    darkModeToggle.textContent = '切换暗黑模式';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
